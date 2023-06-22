@@ -1,6 +1,5 @@
 import { StyleSheet } from 'react-native'
 
-
 export const styles = StyleSheet.create({
 
     h : {
@@ -21,7 +20,7 @@ export const styles = StyleSheet.create({
         width: 300,
         height: 50,
         borderRadius: 10,
-        marginTop: 20,
+        marginBottom: 20,
         fontSize: 30,
            
     },
@@ -39,10 +38,13 @@ export const styles = StyleSheet.create({
     },
     
     cadastro : {
-        textAlign: 'center',
         fontSize : 30,
         flexDirection: 'row',
-        display: 'flex'
+        display: 'flex',
+        textAlign: 'center',
+        alignSelf:'center' 
+        
+       
     },
 
     logo : {

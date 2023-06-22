@@ -10,6 +10,7 @@ export const styles = StyleSheet.create({
         
     },
 
+
     tela: {
         flex: 1,
         backgroundColor: 'black',
@@ -22,8 +23,8 @@ export const styles = StyleSheet.create({
         width: 300,
         height: 50,
         borderRadius: 10,
-        marginTop: 20,
         fontSize: 30,
+        marginBottom: 20,
         
     },
 
@@ -45,7 +46,7 @@ export const styles = StyleSheet.create({
     },
 
     cadastro:{
-        marginTop: 50,
+        marginTop: 10,
         flexDirection: 'row'
     },
     

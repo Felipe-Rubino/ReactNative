@@ -1,9 +1,10 @@
 import { useNavigation } from "@react-navigation/native";
 import { styles } from "./style";
-import { View, Text, TextInput, TouchableOpacity, Image} from "react-native";
+import { View, Text, TextInput, TouchableOpacity, Image, KeyboardAvoidingView} from "react-native";
 import { NativeStackNavigationProp } from "@react-navigation/native-stack";
 import { StackParams } from "../../routes";
 import { StatusBar } from "expo-status-bar";
+import { useState } from "react";
 export const Login = () => {
 
     const navigation = useNavigation < NativeStackNavigationProp<StackParams>> ();
@@ -13,9 +14,9 @@ export const Login = () => {
             navigation.navigate('cadastrar')
         )
     }
-
+    const [text, setText] = useState('');
     return (
-        <>
+        <> 
             <View style={styles.tela}>
                 <StatusBar style="light" />
                 <View>
@@ -29,11 +30,11 @@ export const Login = () => {
                     <Text style={styles.texto}> Skoob </Text>
                 </View>
                 <View style={styles.div}>
-                    <TextInput style={styles.input} placeholder='Email'/>
+                    <TextInput style={styles.input} value={text} onChangeText={setText} placeholder='Email'/>
                     <TextInput style={styles.input} placeholder='Senha'/>
                 </View>
                 <View >
-                    <TouchableOpacity style={styles.butao} >
+                    <TouchableOpacity style={styles.butao} activeOpacity={1}>
                         <Text style={styles.entrar}> Entrar </Text>
                     </TouchableOpacity>
                 </View>
